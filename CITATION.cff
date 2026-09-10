@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use claude-session-icons in research or software, please cite it as below."
+title: "claude-session-icons"
+type: software
+authors:
+  - family-names: Dziatkovskii
+    given-names: Anton
+    orcid: "https://orcid.org/0000-0001-7408-3054"
+    affiliation: "Palo Alto AI Research Lab"
+repository-code: "https://github.com/tonydzi/claude-session-icons"
+url: "https://github.com/tonydzi/claude-session-icons"
+abstract: >-
+  A deterministic engine that puts a one-character category icon at the front of Claude Desktop session titles, so a sidebar of hundreds of sessions stays readable while the sidebar-group API is gated off.
