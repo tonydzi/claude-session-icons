@@ -36,7 +36,7 @@ python session_groups.py retag --limit 100 --all  # migrate old [Word] tags -> i
 python session_groups.py table --limit 500      # CSV of everything, for a spreadsheet review
 ```
 
-The engine never renames anything itself. It prints `{sid, title, group, new_title}` and the agent applies each one with the app's own `set_session_title` MCP tool. That split is deliberate: a script that edits the app's JSON files directly does not work, because the running app keeps the session registry in memory and rewrites those files from it. We tried; the write vanished.
+The engine in `session_groups.py` never renames anything itself. It prints `{sid, title, group, new_title}` and the agent applies each one with the app's own `set_session_title` MCP tool. That split is deliberate: a script that edits the app's JSON files directly does not work, because the running app keeps the session registry in memory and rewrites those files from it. We tried; the write vanished.
 
 ## Adapt before you run it
 
@@ -53,6 +53,6 @@ Windows, macOS and Linux paths are handled; `CLAUDE_DESKTOP_DIR` overrides. Buil
 
 ## Measurement, not a claim
 
-On the machine this was built for: 900 session files on disk, 563 old word-tags migrated to icons, 196 sessions that had no category at all. Ten sessions returned "Session not found" from the app while their JSON sat on disk; those live in a second account scope and are skipped rather than repaired.
+On the machine this was built for, measured 2026-09-10: 900 session files on disk, 563 old word-tags migrated to icons, 196 sessions that had no category at all. Ten sessions returned "Session not found" from the app while their JSON sat on disk; those live in a second account scope and are skipped rather than repaired.
 
-MIT.
+Licensed MIT, see [LICENSE](LICENSE); if you cite this work, use the metadata in [CITATION.cff](CITATION.cff).
