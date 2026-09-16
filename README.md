@@ -12,7 +12,7 @@ Put a one-character category icon at the front of every Claude Desktop session t
 
 ## Why this exists
 
-Claude Desktop ships sidebar groups, and the app has internal MCP tools to move sessions between them (`ccd_sidebar.move_sessions`, `create_group`, `set_pinned`). On our account those tools never appear: they sit behind a server feature gate that is simply absent from the feature payload the app downloads. We filed [anthropics/claude-code#92621](https://github.com/anthropics/claude-code/issues/92621) with the measurement.
+Claude Desktop ships sidebar groups, and the app has internal MCP tools to move sessions between them (`ccd_sidebar.move_sessions`, `create_group`, `set_pinned`). On our account those tools never appear: they sit behind a server feature gate that is simply absent from the feature payload the app downloads. The request to open them is [anthropics/claude-code#92621](https://github.com/anthropics/claude-code/issues/92621) (filed by @jaredfowkes); our measurement of the missing gate is [in that thread](https://github.com/anthropics/claude-code/issues/92621#issuecomment-5584617095).
 
 Until the gate opens, the only writable handle on a session from inside a session is its **title**. So the category lives there, as an icon. One character instead of a `[Category]` word that ate 8-10 characters of a name that was already too long for the sidebar column.
 
